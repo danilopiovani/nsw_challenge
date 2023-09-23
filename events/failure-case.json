@@ -1,0 +1,7 @@
+{
+  "path": "/resource",
+  "httpMethod": "GET",
+  "queryStringParameters": {
+    "address": "%27346+PANORAMA+AVENUE+BATHURST"
+  }
+}

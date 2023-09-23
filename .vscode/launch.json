@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "nsw_challenge:NSWChallengeLambdaFunction",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/template.yaml",
+                "logicalId": "NSWChallengeLambdaFunction"
+            },
+            "lambda": {
+                "payload": {
+                    
+                },
+                "environmentVariables": {},
+                "queryStringParameters": {
+                    "address": "9+MOBBS+LANE+EPPING" // Replace with the address you want to test
+                  }
+            }
+        },
+    ]
+}

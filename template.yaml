@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: A simple AWS SAM application
+
+Resources:
+  NSWChallengeLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: dist/lambda/AddressApi
+      Handler: index.handler
+      Runtime: nodejs16.x
+      Layers:
+        - !Ref NSWChallengeLambdaLayer
+
+  NSWChallengeLambdaLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: lambda-dependencies
+      ContentUri: dist/lambda/AddressApi/dependencies/dep-layer
+      CompatibleRuntimes:
+        - nodejs16.x
+
+    Metadata:
+      BuildMethod: nodejs16.x
