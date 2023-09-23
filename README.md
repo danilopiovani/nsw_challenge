@@ -10,7 +10,15 @@ Before running the Lambda function locally, make sure you have the following pre
 - [Docker](https://www.docker.com/)
 - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 
+## Clone the Repository
+
+To get started, clone this repository to your local machine:
+```bash
+gh repo clone danilopiovani/nsw_challenge
+```
+
 ## Dependencies
+In this project, we have dependencies at two levels: project-level dependencies and Lambda layer dependencies. Here's a breakdown of what needs to be installed:
 
 To install the project dependencies, run the following command in your terminal:
 
@@ -18,20 +26,23 @@ To install the project dependencies, run the following command in your terminal:
 npm install
 ```
 
-Also install the dependencies
-In a second terminal, run the following command
-```bash
-cd dist/lambda/AddressApi/dependencies/dep-layer/
-```
+This command installs project-level dependencies defined in the project's package.json file, such as the AWS SAM CLI itself and development tools.
+
+
+Lambda Layer Dependencies (dist/lambda/AddressApi/dependencies/dep-layer/):
+Additionally, we have specific dependencies used by the Lambda function, which are located within the Lambda layer. To install these dependencies, navigate to the dep-layer directory within the Lambda function's code structure:
 
 ```bash
+cd dist/lambda/AddressApi/dependencies/dep-layer/
 npm install
 ```
 
-Go back to the first terminal.
+These dependencies are isolated and used exclusively by the Lambda function.
+
+By following these installation steps, you ensure that both the project-level and Lambda layer dependencies are properly set up for local development and testing.
 
 ## Running Locally
-Open a terminal window.
+Open a new terminal window.
 
 - Navigate to the project's root directory.
 
