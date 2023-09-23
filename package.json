@@ -8,6 +8,10 @@
   },
   "author": "Danilo Piovani",
   "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "aws-sdk": "^2.7.0"
+  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.122",
     "@types/jest": "^29.5.5",

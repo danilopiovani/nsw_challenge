@@ -10,10 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fetchHelper = void 0;
-const node_fetch_1 = require("node-fetch");
+// import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 const fetchHelper = (endpoint) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const response = yield (0, node_fetch_1.default)(endpoint, {
+        const response = yield fetch(endpoint, {
             method: "GET"
         });
         if (!response.ok) {

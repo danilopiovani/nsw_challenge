@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
-
+// import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 interface FetchHelperResponse {
   data: any;
   errors: string | null;
