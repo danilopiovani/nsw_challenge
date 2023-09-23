@@ -9,6 +9,12 @@ Resources:
       CodeUri: dist/lambda/AddressApi
       Handler: index.handler
       Runtime: nodejs16.x
+      Events:
+        NSWChallengeLambdaApi:
+          Type: Api
+          Properties:
+            Path: /dist/lambda/AddressApi
+            Method: GET
       Layers:
         - !Ref NSWChallengeLambdaLayer
 

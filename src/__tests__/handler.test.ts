@@ -14,7 +14,7 @@ describe('handler', () => {
     expect(typeof result.body).toBe('string');
   });
 
-  it('should handle errors and return an error response', async () => {
+  it('should handle errors and return an error response - LOCATION NOT FOUND', async () => {
     // Mocking the event object with an error condition (location not found)
     const event = createMockEvent('9+MOBBS+LANE+EPPING');
 
@@ -27,7 +27,7 @@ describe('handler', () => {
     expect(result.body).toContain('error');
   });
 
-  it('should handle errors and return an error response', async () => {
+  it('should handle errors and return an error response - API REQUEST ERROR', async () => {
     // Mocking the event object with an error condition (API error)
     const event = createMockEvent('%279+MOBBS+LANE+EPPING');
 

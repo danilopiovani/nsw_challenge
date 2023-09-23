@@ -21,7 +21,7 @@ describe('handler', () => {
         expect(result.statusCode).toBe(200);
         expect(typeof result.body).toBe('string');
     }));
-    it('should handle errors and return an error response', () => __awaiter(void 0, void 0, void 0, function* () {
+    it('should handle errors and return an error response - LOCATION NOT FOUND', () => __awaiter(void 0, void 0, void 0, function* () {
         // Mocking the event object with an error condition (location not found)
         const event = (0, createMockEvent_1.createMockEvent)('9+MOBBS+LANE+EPPING');
         // Invoking the Lambda function
@@ -31,7 +31,7 @@ describe('handler', () => {
         expect(typeof result.body).toBe('string');
         expect(result.body).toContain('error');
     }));
-    it('should handle errors and return an error response', () => __awaiter(void 0, void 0, void 0, function* () {
+    it('should handle errors and return an error response - API REQUEST ERROR', () => __awaiter(void 0, void 0, void 0, function* () {
         // Mocking the event object with an error condition (API error)
         const event = (0, createMockEvent_1.createMockEvent)('%279+MOBBS+LANE+EPPING');
         // Invoking the Lambda function
