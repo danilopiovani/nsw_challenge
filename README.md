@@ -105,6 +105,7 @@ sam local invoke NSWChallengeLambdaFunction --event events/failure-case2.json
 ## Project Management
 
 I decide to manage this project tasks using Trello's Scrum board. This approach helps breaking down tasks into manageable units, and providing a visual representation of project progress. With Trello's Scrum Board I can easily prioritize tasks, and track the project's development, ensuring a smooth and organized project management experience.
+
 ![Trello Board](./trello.png)
 
 [Visit the Trello Board](https://trello.com/b/dYXxZdIQ/nsw-address-lookup)
