@@ -13,8 +13,8 @@ exports.handler = void 0;
 const { fetchHelper } = require('./dependencies/dep-layer');
 // Constants for the APIs
 const locationUrl = "https://portal.spatial.nsw.gov.au/server/rest/services/NSW_Geocoded_Addressing_Theme/FeatureServer/1/query?where=address+%3D+%27[ADDRESS]%27&outFields=*&f=geojson";
-const suburbUrl = "https://portal.spatial.nsw.gov.au/server/rest/services/NSW_Administrative_Boundaries_Theme/FeatureServer/2/query?geometry=[LAT]%2C+[LONG]&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=false&f=geoJSON";
-const stateElectoralDistrictUrl = "https://portal.spatial.nsw.gov.au/server/rest/services/NSW_Administrative_Boundaries_Theme/FeatureServer/4/query?geometry=[LAT]%2C+[LONG]&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=false&f=geoJSON";
+const suburbUrl = "https://portal.spatial.nsw.gov.au/server/rest/services/NSW_Administrative_Boundaries_Theme/FeatureServer/2/query?geometry=[LONG]%2C+[LAT]&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=false&f=geoJSON";
+const stateElectoralDistrictUrl = "https://portal.spatial.nsw.gov.au/server/rest/services/NSW_Administrative_Boundaries_Theme/FeatureServer/4/query?geometry=[LONG]%2C+[LAT]&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=false&f=geoJSON";
 const handler = (event) => __awaiter(void 0, void 0, void 0, function* () {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q;
     try {
@@ -34,8 +34,8 @@ const handler = (event) => __awaiter(void 0, void 0, void 0, function* () {
             throw new Error(`Error fetching location: ${errorsLocation}`);
         }
         // Set latitude and longitude
-        const longitude = (_e = (_d = (_c = (_b = dataLocation === null || dataLocation === void 0 ? void 0 : dataLocation.features) === null || _b === void 0 ? void 0 : _b[0]) === null || _c === void 0 ? void 0 : _c.geometry) === null || _d === void 0 ? void 0 : _d.coordinates) === null || _e === void 0 ? void 0 : _e[1];
-        const latitude = (_j = (_h = (_g = (_f = dataLocation === null || dataLocation === void 0 ? void 0 : dataLocation.features) === null || _f === void 0 ? void 0 : _f[0]) === null || _g === void 0 ? void 0 : _g.geometry) === null || _h === void 0 ? void 0 : _h.coordinates) === null || _j === void 0 ? void 0 : _j[0];
+        const longitude = (_e = (_d = (_c = (_b = dataLocation === null || dataLocation === void 0 ? void 0 : dataLocation.features) === null || _b === void 0 ? void 0 : _b[0]) === null || _c === void 0 ? void 0 : _c.geometry) === null || _d === void 0 ? void 0 : _d.coordinates) === null || _e === void 0 ? void 0 : _e[0];
+        const latitude = (_j = (_h = (_g = (_f = dataLocation === null || dataLocation === void 0 ? void 0 : dataLocation.features) === null || _f === void 0 ? void 0 : _f[0]) === null || _g === void 0 ? void 0 : _g.geometry) === null || _h === void 0 ? void 0 : _h.coordinates) === null || _j === void 0 ? void 0 : _j[1];
         // Error handling for location not found
         if (!longitude || !latitude) {
             throw new Error('Location not found');

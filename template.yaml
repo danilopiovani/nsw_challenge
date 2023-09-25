@@ -17,6 +17,7 @@ Resources:
             Method: GET
       Layers:
         - !Ref NSWChallengeLambdaLayer
+      Role: arn:aws:iam::730794995564:role/nsw-challenge
 
   NSWChallengeLambdaLayer:
     Type: AWS::Serverless::LayerVersion
@@ -28,3 +29,13 @@ Resources:
 
     Metadata:
       BuildMethod: nodejs16.x
+      
+Outputs:
+  ApiEndpoint:
+    Description: "API Gateway endpoint URL"
+    Value:
+      Fn::Sub:
+        - "https://${Api}.execute-api.${Region}.amazonaws.com/${Stage}/"
+        - Api: !Ref NSWChallengeLambdaApi
+          Region: !Ref "AWS::Region"
+          Stage: !Ref "AWS::Stage"
