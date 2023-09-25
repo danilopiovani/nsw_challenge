@@ -110,7 +110,16 @@ I've built an web application to show the use of the Address Lookup Api. It offe
 
 Once you've found your address, just click on it, and the app will display the location details on the map. If, by any chance, the app can't find the location, it will let you know with an error message.
 
-![Alt Text](./image.png)
+Home page
+![Home](./home.png)
+
+Info Popup:
+![info popup](./info.png)
+
+Error Message
+![Error Message](./error.png)
+
+## Links
 
 [Visit the web application](https://nsw-challenge-client.vercel.app/)
 
