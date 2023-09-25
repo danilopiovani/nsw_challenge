@@ -43,8 +43,8 @@ export const handler = async (
     }
 
     // Set latitude and longitude
-    const longitude = dataLocation?.features?.[0]?.geometry?.coordinates?.[1];
-    const latitude = dataLocation?.features?.[0]?.geometry?.coordinates?.[0];
+    const longitude = dataLocation?.features?.[0]?.geometry?.coordinates?.[0];
+    const latitude = dataLocation?.features?.[0]?.geometry?.coordinates?.[1];
 
     // Error handling for location not found
     if (!longitude || !latitude) {
