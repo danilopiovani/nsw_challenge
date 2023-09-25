@@ -102,10 +102,23 @@ Success Case 2:
 sam local invoke NSWChallengeLambdaFunction --event events/failure-case2.json
 ```
 
+## Address Lookup App
 
-## FAQ
+Client Side App Using Address Lookup Api
 
-#### How did you decide on the technical and architectural choices used as part of your solution?
+I've built an web application to show the use of the Address Lookup Api. It offers autocomplete suggestions to help you quickly find the desired address.
 
-#### Are there any improvements you could make?
+Once you've found your address, just click on it, and the app will display the location details on the map. If, by any chance, the app can't find the location, it will let you know with an error message.
+
+![Alt Text](./image.png)
+
+[Visit the web application](https://nsw-challenge-client.vercel.app/)
+
+[Client Repository](https://github.com/danilopiovani/nsw-challenge-client)
+
+[LinkedIn](https://www.linkedin.com/in/danilopiovani/)
+
+
+
+
 
