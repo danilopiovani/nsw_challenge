@@ -69,8 +69,8 @@ Failure Example:
 - http://127.0.0.1:3000/dist/lambda/AddressApi?address=9+MOBBS+LANE+EPPING
 
 Output:
-- {"error":"Address parameter is missing"}
-- {"error":"Location not found"}
+- {"error": "Address parameter is missing"}
+- {"error": "Location not available"}
 
 
 ## Running Tests (Jest)
@@ -104,7 +104,7 @@ sam local invoke NSWChallengeLambdaFunction --event events/failure-case2.json
 
 ## Project Management
 
-I decide to manage this project tasks using Trello's Scrum board. This approach helps breaking down tasks into manageable units, and providing a visual representation of project progress. With Trello's Scrum Board I can easily prioritize tasks, and track the project's development, ensuring a smooth and organized project management experience.
+I decided to manage this project's tasks using Trello's Scrum board. This approach helps break down tasks into manageable units and provides a visual representation of project progress. With Trello's Scrum Board, I can easily prioritize tasks, and track the project's development, ensuring a smooth and organized project management experience.
 
 ![Trello Board](./trello.png)
 
@@ -112,9 +112,9 @@ I decide to manage this project tasks using Trello's Scrum board. This approach 
 
 ## Address Lookup Web App
 
-Client Side App Using Address Lookup Api
+Client Side App Using Address Lookup API
 
-I've built an web application to show the use of the Address Lookup Api. It offers autocomplete suggestions to help you quickly find the desired address.
+I've built a web application to show the use of the Address Lookup API. It offers autocomplete suggestions to help you quickly find the desired address.
 
 Once you've found your address, just click on it, and the app will display the location details on the map. If, by any chance, the app can't find the location, it will let you know with an error message.
 
